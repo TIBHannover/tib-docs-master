@@ -1,0 +1,1 @@
+{project_name} is part of a multi-stage deployment strategy for configuring and deploying Docker-based services using Ansible.
