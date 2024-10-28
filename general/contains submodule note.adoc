@@ -1,0 +1,18 @@
+[NOTE]
+====
+The repository contains
+https://git-scm.com/book/en/v2/Git-Tools-Submodules[submodules]. Make
+sure to clone with `--recursive` option in Git or by checking the
+'`Recursive`' checkbox in TortoiseGit.
+
+....
+> git clone --recursive <REPO>
+....
+
+If not done when cloning, it can be done by
+
+....
+> git submodule init
+> git submodule update
+....
+====
