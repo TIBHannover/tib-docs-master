@@ -1,2 +1,48 @@
-# docs-master
-Central storage of reusable (AsciiDoc) documentation snippets. 
+= docs-master
+Central storage of reusable (AsciiDoc) documentation snippets.
+
+== Usage
+This repository can be added as a Git submodule in other projects, allowing you to seamlessly include these snippets in your AsciiDoc documents.
+
+=== Including Snippets
+
+To include a snippet from this repository, use the following AsciiDoc `include` directive:
+
+----
+\include::docs-master/general/contains submodule note.adoc[]
+----
+
+=== Global Variables
+
+Some snippets in this repository rely on predefined global variables to ensure consistency across different documents. These variables *must be set* in your AsciiDoc files before including the snippets.
+
+==== Mandatory Variables
+
+Currently, the following global variable is required:
+
+- **`project_name`**: Represents the name of your project. This variable is used to dynamically insert the project name in various snippets.
+
+==== Example Declaration:
+
+You should declare variablea at the top of your document like this:
+
+----
+:project_name: MyProject
+----
+
+Once declared, you can reference the variable anywhere in your document, and the value will be automatically substituted. For example:
+
+----
+= {project_name}
+----
+
+=== Updating the Submodule
+
+To keep your submodule up to date with the latest changes, run the following command:
+
+----
+git submodule update --init --remote
+----
+
+== Contributing
+Contributions are welcome! If you have additional snippets or improvements, please submit a pull request.
